@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Mitoviva">
+  <defs>
+    <linearGradient id="mv-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF6B4A"/>
+      <stop offset="1" stop-color="#FFA62B"/>
+    </linearGradient>
+  </defs>
+  <!-- Fundo do ícone (cantos no padrão de app) -->
+  <rect width="512" height="512" rx="112" fill="url(#mv-bg)"/>
+  <!-- Mitocôndria estilizada: cápsula + crista em onda (energia) -->
+  <g transform="rotate(-30 256 256)" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="96" y="171" width="320" height="170" rx="85" stroke-width="30"/>
+    <path d="M150 256 C170 204 194 204 204 256 S238 308 256 256 S290 204 308 256 S342 308 362 256" stroke-width="24"/>
+  </g>
+  <!-- Ponto de energia (verde menta) -->
+  <circle cx="388" cy="128" r="30" fill="#2EC4A6" stroke="#FFFFFF" stroke-width="10"/>
+</svg>

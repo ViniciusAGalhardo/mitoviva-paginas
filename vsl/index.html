@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Protocolo Encendido 30 · Mitoviva</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=Inter:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/vsl.css">
+  <script>
+    // ====== CONFIGURAÇÃO DA PÁGINA (preencher) ======
+    window.PAGE = {
+      VIDEO_SRC: "vsl.mp4",           // VSL própria auto-hospedada (tem prioridade sobre o VTurb; vazio = usa VTurb/exemplo)
+      VTURB_PLAYER_ID: "",            // id do player VTurb da VSL Mitoviva (vazio = player de exemplo)
+      VTURB_ACCOUNT_ID: "",           // id da conta VTurb
+      DELAY_SECONDS: 0,               // padrão para blocos .delay sem data-delay (segundo da chamada para o botão)
+      CHECKOUT_URL: "https://pay.hotmart.com/P108117240G?off=vq5yhgu5&checkoutMode=10",   // front US$37
+      BACK_REDIRECT_URL: "../otra-oportunidad/",
+      META_PIXEL_ID: "",
+    };
+  </script>
+</head>
+<body class="vsl-curta">
+
+<main class="hero">
+  <p class="hero-pre">NUTRICIONISTA REVELA:</p>
+  <h1>El <mark>“Encendido Metabólico”</mark> que despierta los motores quema-grasa ocultos de tu cuerpo…</h1>
+  <p class="hero-sub">Sin matarte en el gimnasio, sin dietas extremas y sin renunciar a las comidas que amas.</p>
+
+  <div class="player" id="player"></div>
+
+  <!--
+    Botões que aparecem durante o vídeo.
+    data-delay = segundo do vídeo em que o bloco aparece (vazio = PAGE.DELAY_SECONDS).
+    Ex.: primeira chamada de compra em 1980 (33:00) e reforço no fechamento em 2400 (40:00).
+  -->
+  <div class="delay" data-delay="" hidden>
+    <a class="cta js-checkout" href="#">¡SÍ, QUIERO MI PROTOCOLO!</a>
+    <p class="cta-sub">🔒 Pago 100% seguro · Acceso inmediato · Garantía de 7 días</p>
+  </div>
+  <div class="delay" data-delay="" hidden>
+    <img class="selos" src="../assets/selo-garantia.svg" alt="Garantía de 7 días" width="96" height="96">
+    <a class="cta js-checkout" href="#">¡QUIERO EMPEZAR HOY!</a>
+  </div>
+</main>
+
+<footer class="rodape">
+  <p>Copyright <span class="js-ano"></span> – Mitoviva®<br>Todos los Derechos Reservados</p>
+  <p><a href="../legal/terminos.html">Términos de uso</a> | <a href="../legal/privacidad.html">Política de Privacidad</a></p>
+  <p class="aviso">Este sitio no está afiliado a Facebook ni a Meta Platforms. Una vez que sales de Facebook, la responsabilidad no es de ellos sino de nuestro sitio.</p>
+  <p class="aviso">Este programa no sustituye la orientación de un profesional de salud. Los resultados varían de persona a persona.</p>
+</footer>
+
+<script src="../assets/paginas.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+:root { --or: #FF5A00; --or2: #FF8A00; --bk: #000; --bk2: #111; --lime: #8BE04E; --cta: #1DB954; --light: #F2F2F2; }
+* { box-sizing: border-box; }
+html, body { margin: 0; overflow-x: hidden; }
+body { background: var(--bk); color: #fff; font: 16px/1.5 Inter, system-ui, sans-serif; }
+img { max-width: 100%; height: auto; display: block; }
+h1, h2, h3 { font-family: Archivo, Inter, sans-serif; line-height: 1.15; margin: 0 0 12px; overflow-wrap: anywhere; }
+h2 { font-weight: 600; font-size: 1.45rem; text-align: center; text-transform: uppercase; }
+h2 span { display: block; color: var(--or); font-weight: 900; }
+.t-dark { color: #1a1a1a; }
+.center { text-align: center; } .muted { color: #bbb; } .small { font-size: .85rem; }
+
+/* 1. Hero */
+.hero { padding: 28px 16px 24px; text-align: center;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255,90,0,.28), transparent 60%), linear-gradient(#1a0d06, #000 70%); }
+.hero-pre { font: 900 1.35rem Archivo, sans-serif; margin: 0; letter-spacing: .01em; }
+.hero h1 { font: 400 1.3rem/1.25 Archivo, sans-serif; margin: 2px 0 10px; }
+.hero mark { background: var(--or); color: #fff; font-weight: 800; padding: 0 6px; border-radius: 4px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.hero-sub { color: var(--or2); font: 800 1.1rem/1.3 Archivo, sans-serif; margin: 0 0 18px; }
+.player { max-width: 720px; margin: 0 auto; aspect-ratio: 16/9; border: 4px solid var(--or); border-radius: 6px; overflow: hidden; background: #000; }
+.player-demo { position: relative; height: 100%; display: grid; place-content: center; text-align: center; gap: 4px; background: linear-gradient(135deg, #2a2a2a, #0d0d0d); }
+.player-demo button { width: 72px; height: 72px; margin: 0 auto; border: 0; border-radius: 50%; font-size: 1.8rem; color: #fff; background: var(--or); cursor: pointer; }
+.player-demo p { margin: 8px 0 0; font-weight: 700; opacity: .8; } .player-demo small { opacity: .5; }
+.player-bar { position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: #333; }
+.player-bar i { display: block; height: 100%; width: 0; background: var(--or); transition: width 1s linear; }
+.player-time { position: absolute; right: 8px; bottom: 10px; font-size: .75rem; opacity: .7; }
+
+/* Versão curta (igual à referência): headline + VSL + botões que aparecem durante o vídeo */
+.vsl-curta .hero { min-height: calc(100vh - 210px); padding-bottom: 40px; }
+.vsl-curta .hero > * { max-width: 720px; margin-left: auto; margin-right: auto; }
+.vsl-curta .delay { margin-top: 18px; }
+.cta-sub { margin: 4px 0 0; font-size: .82rem; color: #bbb; }
+.player { position: relative; }
+.selos { width: 84px; margin: 18px auto 0; }
+
+/* Seções */
+.delay[hidden] { display: none; }
+.sec { padding: 44px 16px; }
+.sec > * { max-width: 720px; margin-left: auto; margin-right: auto; }
+.dark { background: radial-gradient(ellipse at 50% 40%, #2a1408, #000 70%); }
+.dark-2 { background: #1b1b1b; border-top: 3px solid var(--or); border-bottom: 3px solid var(--or); }
+.black { background: var(--bk); border-top: 3px solid var(--or); }
+.light { background: #fff; color: #1a1a1a; }
+.stack-box { border: 1.5px solid var(--or); border-radius: 18px; padding: 16px; background: rgba(0,0,0,.4); }
+
+/* CTA */
+.cta { display: block; max-width: 480px; margin: 24px auto 6px; padding: 18px 14px; border-radius: 8px; text-align: center;
+  font: 900 1.1rem Archivo, sans-serif; color: #fff; text-decoration: none; text-transform: uppercase;
+  background: linear-gradient(#25c45d, #149a43); border: 2px solid #5ff08f; box-shadow: 0 6px 22px rgba(29,185,84,.35); animation: pulso 1.6s infinite; }
+@keyframes pulso { 50% { transform: scale(1.03); } }
+
+/* 3. Faixas diagonais */
+.ribbons { position: relative; height: 110px; overflow: hidden; background: #000; }
+.ribbon { position: absolute; left: -10%; width: 120%; padding: 8px 0; white-space: nowrap; overflow: hidden; font: 600 .9rem Archivo, sans-serif; letter-spacing: .12em; }
+.ribbon span { display: inline-block; animation: marquee 18s linear infinite; }
+.ribbon.gray { top: 18px; transform: rotate(3deg); background: #2b2b2b; color: #bbb; }
+.ribbon.orange { top: 58px; transform: rotate(-2deg); background: var(--or); color: #1a1a1a; }
+.ribbon.orange span { animation-direction: reverse; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* 4/13. Prints de depoimentos */
+.prints { display: grid; grid-auto-flow: column; grid-auto-columns: 78%; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+.print { margin: 0; min-height: 360px; display: grid; place-items: center; text-align: center; padding: 16px; scroll-snap-align: center;
+  border: 2px dashed #ccc; border-radius: 22px; background: #fafafa; color: #888; font-size: .85rem; overflow-wrap: anywhere; }
+
+/* 5. Marca */
+.brand { background: linear-gradient(90deg, #000 30%, #2a2a2a); border-top: 3px solid var(--or); border-bottom: 3px solid var(--or); }
+.brand-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.brand-logo span { font: 400 1.4rem/1 Archivo, sans-serif; }
+.brand-logo b { color: var(--or); font-weight: 900; font-size: 1.9rem; }
+.brand-lead { font: 400 1.35rem/1.25 Archivo, sans-serif; }
+.brand-lead b { font-weight: 800; }
+.brand p { color: #e5e5e5; }
+
+/* 6/8. Prints da app */
+.app-shot { max-width: 300px; margin: 18px auto; border-radius: 28px; border: 6px solid #2a2a2a; box-shadow: 0 0 40px rgba(255,90,0,.25); }
+
+/* 7. Cards */
+.cards { display: grid; gap: 14px; }
+.card { background: #fff; color: #333; border: 2px solid var(--or); border-radius: 22px; padding: 18px; text-align: center; }
+.card .ic { display: grid; place-items: center; width: 48px; height: 48px; margin: 0 auto 8px; border-radius: 12px; background: linear-gradient(var(--or2), var(--or)); font-size: 1.4rem; }
+.card p { margin: 0; font-size: .95rem; } .card b { color: #1a1a1a; }
+
+/* 10. Bônus */
+.pill { display: table; margin: 4px auto 22px; padding: 6px 18px; border-radius: 8px; background: var(--or); color: #fff; font: 900 1.1rem Archivo, sans-serif; }
+.bonus-box { background: var(--bk2); color: #fff; border: 2px solid var(--or); border-radius: 26px; padding: 18px; display: grid; gap: 22px; }
+.bonus { display: grid; grid-template-columns: 110px 1fr; gap: 14px; align-items: center; }
+.bonus h3 { font: 800 1rem Archivo, sans-serif; text-transform: uppercase; }
+.bonus p { margin: 0 0 6px; font-size: .9rem; color: #ddd; }
+.bonus-cover { aspect-ratio: 3/4; border-radius: 6px; display: grid; place-content: center; text-align: center; gap: 4px; font-size: 2rem;
+  box-shadow: 6px 6px 0 #000, 0 10px 24px rgba(0,0,0,.6); }
+.bonus-cover b { font: 800 .85rem/1.1 Archivo, sans-serif; color: #fff; }
+.c1 { background: linear-gradient(160deg, #FFA62B, #a84a00); } .c2 { background: linear-gradient(160deg, #2EC4A6, #0c5e4f); } .c3 { background: linear-gradient(160deg, #FF6B9A, #7a1f45); }
+.valor s { color: #ff7a5c; } .valor b { color: var(--lime); margin-left: 6px; }
+
+/* 11. Garantia */
+.guarantee { background: var(--light); text-align: center; position: relative; }
+.g-num { font: 900 7rem/1 Archivo, sans-serif; color: transparent; background: linear-gradient(var(--or), #ffd0b0); -webkit-background-clip: text; background-clip: text; }
+.g-label { color: #333; margin: -18px 0 0; font-weight: 600; }
+.guarantee h2 { font-size: 2.2rem; font-weight: 900; }
+.stars { color: #FFD60A; font-size: 2.2rem; letter-spacing: 4px; margin: 0; }
+.g-text { color: #333; }
+
+/* 12. Pilha de valor */
+.fire { background: radial-gradient(ellipse at 20% 30%, #3a1a08, #000 70%); }
+.value-list { list-style: none; padding: 16px; border: 1px solid #3a3a3a; border-radius: 14px; background: rgba(20,20,20,.85); }
+.value-list li { padding: 8px 0 8px 34px; position: relative; }
+.value-list li::before { content: "◉"; position: absolute; left: 4px; color: var(--or); font-size: 1.2rem; line-height: 1.3; }
+.value-list em { color: var(--or); font-style: normal; font-weight: 700; }
+.value-list s { color: var(--or); font-weight: 700; }
+.price-box { text-align: center; margin-top: 18px; }
+.price-box s { color: #aaa; }
+.hoy { margin: 8px 0 0; font: 800 1rem Archivo, sans-serif; letter-spacing: .1em; }
+.price { margin: 0; font: 900 3.6rem/1 Archivo, sans-serif; color: var(--lime); }
+
+/* 14. FAQ */
+.faq { display: grid; gap: 12px; margin-top: 16px; }
+.faq details { border: 1.5px solid #fff; border-radius: 10px; overflow: hidden; }
+.faq summary { padding: 16px; font: 700 1.05rem Archivo, sans-serif; cursor: pointer; list-style: none; }
+.faq details[open] { background: #f4f4f4; border-color: var(--or); }
+.faq details[open] summary { background: var(--or); color: #fff; }
+.faq details p { margin: 0; padding: 14px 16px; color: #222; }
+
+/* 15. Passos */
+.steps { border-top-color: var(--lime); border-bottom-color: var(--lime); }
+.step { text-align: center; margin-top: 26px; }
+.num { font: 900 3.2rem/1 Archivo, sans-serif; color: var(--or); margin: 0 0 10px; }
+.step h3 { color: var(--or); font: 400 1.3rem Archivo, sans-serif; } .step h3 b { font-weight: 900; }
+.mock-form { max-width: 300px; margin: 0 auto 14px; padding: 14px; background: #fff; color: #222; border-radius: 10px 10px 0 0; border: 8px solid #222; border-bottom-width: 14px; display: grid; gap: 6px; text-align: left; font-size: .8rem; }
+.mock-form span { color: var(--or); font-weight: 700; }
+.mock-form i { display: block; height: 14px; border: 1px solid #ddd; border-radius: 4px; }
+.mock-form em { font-style: normal; text-align: center; background: var(--cta); color: #fff; border-radius: 4px; padding: 4px; font-weight: 700; }
+
+/* 17. Suporte */
+.support { display: flex; gap: 18px; align-items: center; justify-content: center; background: radial-gradient(ellipse at 20% 50%, #3a1a08, #000 70%); border-top: 3px solid var(--lime); }
+.support > * { margin: 0; }
+.support .mail { font-size: 4.5rem; filter: drop-shadow(0 0 18px rgba(255,90,0,.6)); }
+.support h2 { text-align: left; color: var(--lime); font-weight: 900; }
+.btn-line { display: inline-block; margin-top: 8px; padding: 10px 16px; border: 2px solid var(--lime); border-radius: 8px; color: #fff; text-decoration: none; font-weight: 700; overflow-wrap: anywhere; }
+
+/* 18. Especialista */
+.bio { text-align: center; background: var(--light); }
+.bio-photo { width: 220px; height: 260px; margin: 0 auto 16px; display: grid; place-items: center; border: 2px dashed #bbb; border-radius: 16px; color: #888; font-size: .85rem; }
+
+/* Rodapé */
+.rodape { background: #111; color: #9a9a9a; text-align: center; padding: 26px 16px; font-size: .85rem; }
+.rodape a { color: #9a9a9a; }
+.rodape .aviso { font-size: .72rem; max-width: 720px; margin: 8px auto; }
+
+@media (min-width: 760px) {
+  .hero h1 { font-size: 2rem; } .hero-pre { font-size: 2rem; } .hero-sub { font-size: 1.4rem; }
+  .cards { grid-template-columns: 1fr 1fr; }
+  .prints { grid-auto-columns: 32%; }
+}

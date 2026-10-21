@@ -1,0 +1,67 @@
+:root { --coral: #FF6B4A; --orange: #FFA62B; --mint: #2EC4A6; --ink: #111; --cta: #1DB954; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.5 Roboto, system-ui, sans-serif; color: #fff;
+  background: #000 radial-gradient(ellipse at top, #3a1a10 0%, #000 60%) no-repeat; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 24px 16px 40px; }
+
+/* Headline em 3 níveis */
+.headline { text-align: center; margin-bottom: 20px; }
+.headline .pre { font: 800 1.1rem Poppins, sans-serif; text-transform: uppercase; margin: 0; letter-spacing: .02em; }
+.headline .pre.alerta { color: #FFD60A; }
+.headline h1 { font: 600 1.45rem/1.2 Poppins, sans-serif; margin: 4px 0 10px; }
+.headline mark { background: var(--coral); color: #fff; padding: 0 6px; border-radius: 4px; }
+.headline .sub { color: var(--orange); font-weight: 700; margin: 0; }
+
+/* Player */
+.player { aspect-ratio: 16/9; border: 4px solid var(--coral); border-radius: 8px; overflow: hidden; background: #000; }
+.player-demo { position: relative; height: 100%; display: grid; place-content: center; text-align: center; gap: 4px;
+  background: linear-gradient(135deg, #2a2a2a, #111); }
+.player-demo button { width: 72px; height: 72px; margin: 0 auto; border: 0; border-radius: 50%; font-size: 1.8rem;
+  color: #fff; background: var(--coral); cursor: pointer; }
+.player-demo p { margin: 8px 0 0; font-weight: 700; opacity: .8; }
+.player-demo small { opacity: .5; }
+.player-bar { position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: #333; }
+.player-bar i { display: block; height: 100%; width: 0; background: var(--coral); transition: width 1s linear; }
+.player-time { position: absolute; right: 8px; bottom: 10px; font-size: .75rem; opacity: .7; }
+
+/* Oferta */
+.delay[hidden] { display: none; }
+.cta { display: block; margin: 20px auto 8px; max-width: 480px; padding: 18px 16px; border-radius: 10px; text-align: center;
+  font: 800 1.15rem Poppins, sans-serif; text-transform: uppercase; color: #fff; text-decoration: none;
+  background: var(--cta); box-shadow: 0 6px 0 #138a3d; animation: pulso 1.6s infinite; }
+@keyframes pulso { 50% { transform: scale(1.03); } }
+.seguro { text-align: center; font-size: .85rem; opacity: .75; margin: 0; }
+.oferta { margin: 28px 0; padding: 20px 16px; background: #fff; color: #1F2933; border-radius: 14px; text-align: center; }
+.oferta h2 { font: 600 1.4rem Poppins, sans-serif; margin: 8px 0; }
+.oferta h3 { font: 600 1.1rem Poppins, sans-serif; margin: 18px 0 6px; }
+.mockup { width: 70%; max-width: 280px; height: auto; }
+.entregaveis, .bonus { list-style: none; padding: 0; text-align: left; margin: 10px 0; }
+.entregaveis li, .bonus li { padding: 8px 0 8px 28px; border-bottom: 1px solid #eee; position: relative; }
+.entregaveis li::before, .bonus li::before { content: "✔"; position: absolute; left: 4px; color: var(--mint); font-weight: 700; }
+.ancora { margin: 16px 0 0; color: #9CA3AF; }
+.preco { font: 800 2.4rem Poppins, sans-serif; color: var(--coral); margin: 0; overflow-wrap: anywhere; }
+.headline h1, .cta, .oferta h2 { overflow-wrap: anywhere; }
+.parcela { margin: 0; color: #6B7280; font-size: .9rem; }
+.garantia { display: flex; gap: 16px; align-items: center; margin: 24px 0; padding: 16px; border: 1px dashed #555; border-radius: 12px; }
+.garantia h3 { margin: 0 0 4px; font: 600 1.05rem Poppins, sans-serif; }
+.garantia p { margin: 0; opacity: .85; }
+.faq h3 { font: 600 1.2rem Poppins, sans-serif; text-align: center; }
+.faq details { border-bottom: 1px solid #333; padding: 12px 0; }
+.faq summary { font-weight: 700; cursor: pointer; }
+.escassez { text-align: center; color: #FFD60A; font-weight: 700; }
+
+/* Rodapé */
+.rodape { background: #111; color: #9CA3AF; text-align: center; padding: 24px 16px; font-size: .85rem; }
+.rodape a { color: #9CA3AF; }
+.rodape .aviso { font-size: .72rem; max-width: 720px; margin: 8px auto; }
+
+/* Páginas de upsell (texto + widget Hotmart) */
+.copy { background: #fff; color: #1F2933; border-radius: 14px; padding: 20px 18px; margin: 20px 0; }
+.copy h2 { font: 600 1.2rem Poppins, sans-serif; margin: 20px 0 6px; color: var(--coral); }
+.copy h2:first-child { margin-top: 0; }
+.copy p { margin: 0 0 12px; }
+.copy ul { padding-left: 20px; margin: 0 0 12px; }
+.copy li { margin-bottom: 6px; }
+.copy .nota { font-size: .9rem; color: #6B7280; }
+.widget-box { background: #fff; color: #1F2933; border-radius: 14px; padding: 16px; margin: 20px 0; min-height: 120px; }
+.widget-box h3 { font: 600 1.1rem Poppins, sans-serif; text-align: center; margin: 0 0 12px; }
